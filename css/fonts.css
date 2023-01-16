@@ -1,0 +1,41 @@
+
+
+
+@font-face {
+    font-family: "Montserrat-Arabic-Light";
+    src:url("../webfonts/Montserrat/Montserrat-Arabic-Light.woff") , url("../webfonts/Montserrat/Montserrat-Arabic-Light.woff2") , url("../webfonts/Montserrat/Montserrat-Arabic-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Arabic-Regular";
+    src:url("../webfonts/Montserrat/Montserrat-Arabic-Regular.woff") , url("../webfonts/Montserrat/Montserrat-Arabic-Regular.woff2") , url("../webfonts/Montserrat/Montserrat-Arabic-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: "Montserrat-Arabic-Medium";
+    src:url("../webfonts/Montserrat/Montserrat-Arabic-Medium.woff") , url("../webfonts/Montserrat/Montserrat-Arabic-Medium.woff2") , url("../webfonts/Montserrat/Montserrat-Arabic-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Arabic-SemiBold";
+    src:url("../webfonts/Montserrat/Montserrat-Arabic-SemiBold.woff") , url("../webfonts/Montserrat/Montserrat-Arabic-SemiBold.woff2") , url("../webfonts/Montserrat/Montserrat-Arabic-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Arabic-Bold";
+    src:url("../webfonts/Montserrat/Montserrat-Arabic-Bold.woff") , url("../webfonts/Montserrat/Montserrat-Arabic-Bold.woff2") , url("../webfonts/Montserrat/Montserrat-Arabic-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
