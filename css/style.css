@@ -270,7 +270,7 @@ header {
 .nav-header {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   padding: 20px 0;
   transition: all 0.3s ease-in-out;
 }
@@ -700,8 +700,18 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
 .explore-btn:hover{
   text-decoration: none;
   color: var(--sec-color);
-  background-color: #000;
+  background-color: var(--main-color);
 
+
+}
+.pro-title{
+  font-size: 40px;
+  color: var(--sec-color);
+  font-weight: bold;
+  text-align: start;
+  margin:0 0 36px;
+  text-transform: capitalize;
+    
 }
 .scroll-down {
   position: absolute;
@@ -741,6 +751,7 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
   }
   .main-banner img {
     min-height: 100vh;
+    object-fit: cover;
   }
   .caption-title {
     font-size: 20px;
@@ -753,7 +764,10 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
 .scroll-down{
   display: none;
 }
-
+.pro-title{
+  text-align: center;
+  font-size: 24px;
+}
   
 }
 
@@ -2620,6 +2634,9 @@ html[dir="rtl"] .mission-vision-section-img {
  .about-us-cont{
   display: grid;
   grid-template-columns: repeat(2,1fr);
+ }
+ .pro-title{
+  text-align: start;
  }
  .about-us-img{
   order: 0;
