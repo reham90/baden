@@ -182,17 +182,21 @@ $(document).ready(function () {
   });
 });
 
-$("a#single_image").fancybox();
-$("a#single_image2").fancybox();
-$("a#single_image3").fancybox();
-$("a#single_image4").fancybox();
-$("a#single_image5").fancybox();
-$("a#single_image6").fancybox();
-$("a#single_image7").fancybox();
-$("a#single_image8").fancybox();
-
-$('#fancybox-close').click(function(){
-  $(this).css('display:inline-block')
+$('[data-fancybox]').fancybox({
+  // Options will go here
+  buttons : [
+    'close'
+  ],
+  wheel : false,
+  transitionEffect: "slide",
+   // thumbs          : false,
+  // hash            : false,
+  loop            : true,
+  // keyboard        : true,
+  toolbar         : false,
+  // animationEffect : false,
+  // arrows          : true,
+  clickContent    : false
 });
 
 
