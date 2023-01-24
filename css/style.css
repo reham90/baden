@@ -2048,7 +2048,8 @@ ol.breadcrumb {
     padding: 21px 0 0;
   }
   html[dir="rtl"] .language-anchor{
-    margin-inline-start: -39px;
+    /* margin-inline-start: -39px; */
+    background-color: transparent;
   }
   .main-banner figure{
     margin: 0;
