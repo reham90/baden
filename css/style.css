@@ -754,7 +754,7 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
     object-fit: cover;
   }
   html[dir="rtl"] .tabs ul li a.active::after{
-    border-right: 0;
+    border-right: 0 !important;
   }
   .caption-title {
     font-size: 20px;
