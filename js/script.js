@@ -41,7 +41,7 @@ $(document).ready(function () {
 
   //fixed nav
   $stickyNav = $(".top-header");
-  $(window).on("scroll load", function () {
+  $(window).scroll("scroll load", function () {
     var scroll = $(window).scrollTop();
     if (scroll >= 112) {
       $stickyNav.addClass("fixed-nav", 500);
@@ -54,7 +54,7 @@ $(document).ready(function () {
   });
   var $stickyheader = $("header");
   lastScroll = 0;
-  $(window).on("scroll load", function () {
+  $(window).scroll("scroll load", function () {
     var scroll = $(window).scrollTop();
     if (lastScroll - scroll > 0) {
       $stickyheader.addClass("fixed-header", { duration: 1000 });
@@ -93,7 +93,7 @@ $(document).ready(function () {
     than have it running constantly during the action of resizing.
     */
     var resizeTimer;
-    $(window).on('resize', function(e) {
+    $(window).resize('resize', function(e) {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function() {
         tabControl();
@@ -111,7 +111,7 @@ $(document).ready(function () {
     function tabControl() {
       var tabs = $('.tabbed-content').find('.tabs');
       if(tabs.is(':visible')) {
-        tabs.find('a').on('click', function(event) {
+        tabs.find('a').click('click', function(event) {
           event.preventDefault();
           var target = $(this).attr('href'),
               tabs = $(this).parents('.tabs'),
@@ -123,7 +123,7 @@ $(document).ready(function () {
           $(target).addClass('active');
         });
       } else {
-        $('.item').on('click', function() {
+        $('.item').click('click', function() {
           var container = $(this).parents('.tabbed-content'),
               currId = $(this).attr('id'),
               items = container.find('.item');
@@ -141,12 +141,15 @@ $(document).ready(function () {
     $(".nav-foot-header").addClass("footer-accordion");
     $(".nav-foot").addClass("footer-panel");
   }
+ 
   $(".footer-accordion").click(function () {
-    var x = $(this).siblings().prop("scrollHeight") + 15 + "px";
+    
+   
+    
     $(".footer-accordion").not(this).removeClass("active");
     $(this).toggleClass("active");
     if ($(this).siblings().css("max-height") == "0px") {
-      $(this).siblings().css("max-height", x);
+      $(this).siblings().css("max-height", "200px");
       $(this).siblings(".nav-foot").css("padding-top", "15px");
     } else {
       $(this).siblings().css("max-height", "0");
@@ -178,6 +181,62 @@ $(document).ready(function () {
       : $(".arrow-top").fadeOut(300);
   });
 });
+
+$("a#single_image").fancybox();
+$("a#single_image2").fancybox();
+$("a#single_image3").fancybox();
+$("a#single_image4").fancybox();
+$("a#single_image5").fancybox();
+$("a#single_image6").fancybox();
+$("a#single_image7").fancybox();
+$("a#single_image8").fancybox();
+
+$('#fancybox-close').click(function(){
+  $(this).css('display:inline-block')
+});
+
+
+///////// **clients-section** /////////
+var screen = new Swiper(".clients-section .swiper-container", {
+  loop: true,
+  autoplay: true,
+  pagination: {
+    el: ".clients-slider .swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".clients-section .swiper-btn-next",
+    prevEl: ".clients-section .swiper-btn-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    767: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    769: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    992: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+    1199: {
+      slidesPerView: 6,
+      spaceBetween: 30,
+    },
+  },
+});
+
+
+
+
+
+
 
 
    

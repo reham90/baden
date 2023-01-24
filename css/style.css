@@ -201,7 +201,7 @@ html[dir="ltr"] .lang-word{
 .language-anchor{
   width: 89px;
   height: 32px;
-  background: #5b5859;
+  background: rgba(255,255,255,0.2);;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,11 +212,16 @@ html[dir="ltr"] .lang-word{
   margin-inline-start: 26px;
 }
 .fixed-header .language-anchor{
-  background-color: var(--main-hover);
+  background-color: rgba(0,0,0,0.2);
   color: var(--main-color);
 }
+.fixed-header .language-anchor:hover{
+  background-color: #000;
+  color:var(--sec-color);
+}
 .language-anchor:hover{
-  color: var(--main-hover);
+  color: #000;
+  background: var(--sec-color);
 }
 
 .lang-word i {
@@ -502,7 +507,7 @@ width: 0;
 .fixed-header {
   position: fixed;
  
-  box-shadow: 0px -2px 5px 2px #00000082;
+  /* box-shadow: 0px -2px 5px 2px #00000082; */
 }
 .change-color.fixed-header{
   background-color: var(--sec-color);
@@ -657,6 +662,27 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
   text-transform: capitalize;
   font-weight: bold;
 }
+.download-btn{
+  width: 246px;
+  height: 45px;
+  border-radius: 22px;
+  color: var(--sec-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: capitalize;
+  transition: 0.5s;
+  background-color: var(--main-color);
+  margin-bottom: 65px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.download-btn:hover{
+  background-color:var(--main-hover) ;
+  color: var(--sec-color);
+  text-decoration: none;
+}
 .explore-btn{
   width: 210px;
   height: 50px;
@@ -674,7 +700,7 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
 .explore-btn:hover{
   text-decoration: none;
   color: var(--sec-color);
-  background-color: var(--main-hover);
+  background-color: #000;
 
 }
 .scroll-down {
@@ -788,6 +814,7 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
     text-align: start;
     margin-bottom: 38px;
     font-family: 'Montserrat-Arabic-Light';
+    line-height: 1.8;
 }
 .about-us-btns{
   display: flex;
@@ -863,14 +890,15 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
   }
   .about-text{
     margin-inline-end: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    overflow: hidden;
     margin-inline-start: 0;
   }
   .about-text span{
     padding-inline-start: 0;
     margin-bottom: 12px;
+    text-align: center;
+    display: block;
   }
   .about-text span::before{
     width: 0;
@@ -878,6 +906,7 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
   }
   .about-text-content{
     padding-inline-start: 0;
+   
   }
   .about-us-head {
     font-size: 24px;
@@ -1065,7 +1094,7 @@ html[dir="rtl"] .tabs ul li a.active::after{
 a:hover{
   text-decoration: none;
 }
-.pro-text h2{
+.pro-text a{
   font-size: 14px;
     color: var(--main-hover);
     font-family: 'Montserrat-Arabic-Medium';
@@ -1077,7 +1106,7 @@ a:hover{
     display: inline-block;
 }
 
-.pro-text h2:hover{
+.pro-text a:hover{
   color: var(--sec-color);
 }
 .pro-text p{
@@ -1086,6 +1115,9 @@ a:hover{
     color: #fff;
     line-height: 19px;
     margin-bottom: 22px;
+}
+#fancybox-close{
+  background-image: url(../images/fancybox.png);
 }
 .pro-details{
   list-style: none;
@@ -1097,7 +1129,7 @@ a:hover{
   font-weight: bold;
   color: var(--main-hover);
   text-transform: capitalize;
-  margin-bottom: 9px;
+  margin-bottom: 5px;
 }
 .pro-details li span{
   margin-inline-start: 15px;
@@ -1124,13 +1156,13 @@ a:hover{
 }
 /* The project specific CSS starts here This is the minimum CSS that you will need in order for this to work */
  .tabbed-content .tabs {
-	 display: none;
+	 /* display: none; */
 }
  .tabbed-content .item {
-	 min-height: 2em;
+	 /* min-height: 2em; */
 }
  .tabbed-content .item::before {
-	 content: attr(data-title);
+	 /* content: attr(data-title); */
 }
  .tabbed-content .item .item-content {
 	 opacity: 0;
@@ -1318,7 +1350,7 @@ a:hover{
  
   .gallery-cont {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
   }
  
  
@@ -1345,6 +1377,109 @@ a:hover{
 /*                      services-section                      */
 
 
+/*                      clients-section                      */
+.clients-section{
+  background-color: #f7f7f7;
+  padding: 90px 0 100px;
+  text-align: center;
+
+}
+.clients-slider .swiper-btn {
+  position: absolute;
+  z-index: 1;
+  top: 35%;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #808080;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 1320px) {
+  .clients-slider .swiper-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.clients-slider .swiper-btn:hover {
+  background-color: transparent;
+}
+.clients-slider .swiper-btn i {
+  z-index: 2;
+}
+.clients-slider .swiper-btn.swiper-btn-next {
+  left: -75px;
+}
+
+.clients-slider .swiper-btn.swiper-btn-prev {
+  right: -75px;
+}
+
+.clients-slider .swiper-pagination {
+  position: relative;
+  width: 100%;
+  bottom: auto;
+ display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  margin-top: 33px;
+  justify-content: center;
+ 
+}
+
+@media (max-width: 1320px) {
+  .clients-slider .swiper-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.clients-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: var(--main-hover);
+  opacity: 0.5;
+  margin: 0 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+  border-radius: 50%;
+}
+
+.clients-slider .swiper-pagination .swiper-pagination-bullet:hover {
+  background-color: var(--main-color);
+}
+
+.clients-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--main-color);
+  opacity: 1;
+}
+.clients-section .swiper-wrapper{
+  align-items: center;
+}
+.clients-slider{
+  position: relative;
+  padding-top: 48px;
+}
+
+
 
 
 
@@ -1352,7 +1487,7 @@ a:hover{
 
 /*                                   footer                            */
 footer {
-  padding: 50px 0 35px;
+  padding: 50px 0 38px;
   position: relative;
   background: var(--main-color);
 }
@@ -1362,7 +1497,7 @@ footer {
   list-style: none;
 }
 footer figure{
-  margin: 0 0 34px;
+  margin: 0 0 32px;
 }
 .contacts-list i{
   color: var(--sec-color);
@@ -1372,7 +1507,7 @@ footer figure{
 .contacts-list li{
   color: var(--sec-color);
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 .contacts-list li a{
   color: var(--sec-color);
@@ -1392,9 +1527,9 @@ footer figure{
   white-space: nowrap;
   font-size: 14px;
   color: var(--sec-color);
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   text-align: start;
-  padding-top: 45px;
+  padding-top: 50px;
  font-family: "Montserrat-Arabic-SemiBold";
 }
 @media (min-width: 991px) {
@@ -1406,7 +1541,7 @@ footer figure{
   }
 }
 .nav-foot li {
-  margin-bottom: 13px;
+  margin-bottom: 9px;
 }
 .nav-foot-link {
   color: var(--main-hover);
@@ -1605,7 +1740,7 @@ html[dir="ltr"] .phone-icon{
   -ms-flex-align: center;
   align-items: center;
   justify-content: space-between;
-  padding-top: 63px;
+  padding-top: 56px;
 }
 .copy-right {
   display: -webkit-box;
@@ -1821,7 +1956,7 @@ ol.breadcrumb {
   font-size: 16px;
   font-family: "Montserrat-Arabic-Light";
   color: var(--main-color);
-  margin:0 0 104px;
+  margin:0 0 38px;
 }
 .brands-title{
   color: var(--main-color);
@@ -1866,12 +2001,21 @@ ol.breadcrumb {
 @media (max-width: 991px) {
 .language-anchor{
     /* margin-inline-end: 8px; */
-  display: block;
+  display: flex;
     margin-inline-start: 8px;
     background: transparent;
   }
   .nav-header-2 .language-anchor{
     background-color: transparent;
+  }
+  .clients-section{
+    padding: 50px 0 ;
+  }
+  .clients-slider{
+    padding-top: 0;
+  }
+  .clients-slider img{
+    width: 100px;
   }
   .brands-parag{
     margin: 0 0 60px;
@@ -1918,7 +2062,7 @@ ol.breadcrumb {
     padding: 10px 0;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-end;
+    /* align-items: flex-end; */
   }
   .show-icons, .header-icons .add-to{
     margin-inline-end: 0;
@@ -2226,7 +2370,7 @@ ol.breadcrumb {
     margin-bottom: 20px;
   }
   .tabbed-content .item::before{
-    content: attr(data-title);
+    /* content: attr(data-title);
     background: rgb(47, 43, 44);
     color: var(--sec-color);
     width: 100%;
@@ -2234,18 +2378,49 @@ ol.breadcrumb {
     padding: 10px 15px;
     margin-bottom: 1px;
     text-align: start;
-    text-transform: capitalize;
+    text-transform: capitalize; */
   }
   .tabbed-content .item.active::before{
-    background-color: var(--sec-color);
+    /* background-color: var(--sec-color);
     color: var(--main-color);
    margin-bottom: 20px;
    text-transform: capitalize;
    font-family: "Montserrat-Arabic-Medium";
-   position: relative;
+   position: relative; */
+  }
+  .tabs ul{
+   
+    width: 100%;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .tabs ul li{
+    width: auto;
+    height: 50px;
+    display: flex;
+    margin-bottom: 10px;
+    margin-inline-end: 10px;
+  }
+  .tabs ul li:last-child{
+    margin-inline-end: 0;
+  }
+  .tabs ul li a{
+    font-size: 14px;
+    padding: 15px;
+    width: auto;
+    height: 50px;
+  }
+  .tabs ul li a span{
+    display: none;
+  }
+  .tabs ul li a.active::after{
+    border-left: 0;
   }
   .tabbed-content .item.active{
     position: relative;
+    padding-top: 50px;
   }
   .tabbed-content .item.active::before::after{
     content: "";
@@ -2263,7 +2438,7 @@ ol.breadcrumb {
     opacity: 1;
   }
   .tabbed-content{
-    padding-bottom: 20px;
+    padding-bottom: 35px;
   }
   .products-section h3{
     font-size: 24px;
@@ -2455,6 +2630,10 @@ html[dir="rtl"] .mission-vision-section-img {
  }
  .about-text span{
   padding-inline-start: 50px;
+  display: flex;
+ }
+ .about-text{
+  margin-inline-start: 0;
  }
  .contacts-list li{
   font-size: 13px;
@@ -2487,6 +2666,12 @@ html[dir="rtl"] .mission-vision-section-img {
  .contacts-list li a{
   font-size: 13px;
   white-space: nowrap;
+ }
+ .gallery-cont{
+  gap:10px;
+ }
+ .tab-cont{
+  grid-template-columns: repeat(2,1fr);
  }
  .about-text span::before{
   width: 30px;
@@ -2542,7 +2727,7 @@ html[dir="rtl"] .mission-vision-section-img {
   }
 }
 
-@media (min-width:806px) and (max-width: 984px)  {
+@media (min-width:800px) and (max-width: 984px)  {
   .tabbed-content .item.active::before{
     display: none;
   }
@@ -2550,10 +2735,10 @@ html[dir="rtl"] .mission-vision-section-img {
     display: none;
   }
   .tabbed-content.tabs-side .item{
-    margin-inline-start: 200px;
+    margin-inline-start: 150px;
   }
   .tabbed-content{
-    min-height: 485px;
+    min-height: 450px;
   }
   .pro-text p{
     font-size: 12px;
@@ -2565,21 +2750,32 @@ html[dir="rtl"] .mission-vision-section-img {
     grid-template-columns: repeat(2,1fr);
   }
   .tabs ul li a{
-    width: 180px;
+    width: auto;
     font-size: 14px;
     white-space: nowrap;
     padding: 20px 15px;
   }
   .tabbed-content.tabs-side .tabs{
-    width: 180px;
+    width: 140px;
   }
   
   .tabs ul li{
-    width: 180px;
+    width: 140px;
+  }
+  .tabbed-content .item.active{
+    padding-top: 0;
   }
   .tabs ul{
-    width: 180px;
+    width: 140px;
+    display: block;
   }
+  .tabs ul li a.active::after{
+    border-left: 8px solid #fff;
+  }
+  .tabbed-content .tabs li a {
+    display: flex;
+    padding: 15px;
+}
   .pro-text{
     width: 100px;
   }
