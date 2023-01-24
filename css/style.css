@@ -737,10 +737,10 @@ background: linear-gradient(180deg, rgba(36,32,33,1) 0%, rgba(255,255,255,0) 100
 @media (max-width: 991px) {
  
   .main-banner {
-    min-height: 250px;
+    min-height: 100vh;
   }
   .main-banner img {
-    min-height: 250px;
+    min-height: 100vh;
   }
   .caption-title {
     font-size: 20px;
