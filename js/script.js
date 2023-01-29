@@ -182,22 +182,9 @@ $(document).ready(function () {
   });
 });
 
-$('[data-fancybox]').fancybox({
-  // Options will go here
-  buttons : [
-    'close'
-  ],
-  wheel : false,
-  transitionEffect: "slide",
-   // thumbs          : false,
-  // hash            : false,
-  loop            : true,
-  // keyboard        : true,
-  toolbar         : false,
-  // animationEffect : false,
-  // arrows          : true,
-  clickContent    : false
-});
+
+
+
 
 
 ///////// **clients-section** /////////
@@ -236,7 +223,29 @@ var screen = new Swiper(".clients-section .swiper-container", {
   },
 });
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$('[data-fancybox]').fancybox({
+  // Options will go here
+  buttons: [
+    "slideShow",
+    "thumbs",
+    "zoom",
+    "fullScreen",
+    "share",
+    "close"
+  ],
+  wheel : false,
+  transitionEffect: "slide",
+   // thumbs          : false,
+  // hash            : false,
+  loop            : true,
+  // keyboard        : true,
+  toolbar         : false,
+  // animationEffect : false,
+  // arrows          : true,
+  clickContent    : false,
+  protect: true
+});
 
 
 

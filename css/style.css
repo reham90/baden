@@ -2057,7 +2057,7 @@ ol.breadcrumb {
     padding-top: 0;
   }
   .clients-slider img{
-    width: 100px;
+    width: 80px;
   }
   .brands-parag{
     margin: 0 0 60px;
@@ -2436,8 +2436,9 @@ ol.breadcrumb {
     width: 100%;
   
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: scroll;
+    /* flex-wrap: wrap;
+    justify-content: center; */
   }
   .tabs ul li{
     width: auto;
@@ -2445,6 +2446,10 @@ ol.breadcrumb {
     display: flex;
     margin-bottom: 10px;
     margin-inline-end: 10px;
+    white-space: nowrap;
+  }
+  ::-webkit-scrollbar {
+    height:  5px;
   }
   .tabs ul li:last-child{
     margin-inline-end: 0;
@@ -2814,6 +2819,7 @@ html[dir="rtl"] .mission-vision-section-img {
   .tabs ul{
     width: 140px;
     display: block;
+    overflow-x: hidden;
   }
   .tabs ul li a.active::after{
     border-left: 8px solid #fff;
